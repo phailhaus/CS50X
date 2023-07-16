@@ -1,8 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
 
-#include <string.h>
-
 int get_int_bounded(string message, bool lowerboundbool, int lowerbound, bool upperboundbool, int upperbound);
 void printchars(char symbol, int length);
 
