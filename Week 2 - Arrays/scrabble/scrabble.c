@@ -18,15 +18,37 @@ int main(void)
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
 
-    // TODO: Print the winner
+    // Print the winner
+    string output;
+    if (score1 == score2)
+    {
+        output = "Tie!";
+    }
+    else if (score1 > score2)
+    {
+        output = "Player 1 wins!";
+    }
+    else
+    {
+        output = "Player 2 wins!";
+    }
+    printf("%s\n", output);
 }
 
 int compute_score(string word)
 {
-    // TODO: Compute and return score for string
+    // Compute and return score for string
     int length = strlen(word);
-    for (int i = 0; i < length, i++)
+    int score = 0;
+
+    for (int i = 0; i < length; i++)
     {
-        char 
+        char c = word[i];
+        int charid = toupper(c);
+        if (charid >= 65 && charid <= 90) // A is ASCII ID 65, Z is 90.
+        {
+            score += POINTS[charid - 65]; // Get letter value from POINTS array and add to word score.
+        }
     }
+    return score;
 }
