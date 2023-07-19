@@ -69,7 +69,7 @@ int main(int argc, string argv[])
     bool won = false;
 
     // print greeting, using ANSI color codes to demonstrate
-    printf(GREEN"This is WORDLE50"RESET"\n");
+    printf("%s", "This is WORDLE\n");
     printf("You have %i tries to guess the %i-letter word I'm thinking of\n", guesses, wordsize);
 
     // array to hold guess status, reset to zero each loop
@@ -127,7 +127,7 @@ string get_guess(int wordsize)
     // ensure users actually provide a guess that is the correct length
     do
     {
-        guess = get_string("%s", "Input a 5-letter word: ");
+        guess = get_string("Input a %i-letter word: ", wordsize);
     }
     while (strlen(guess) != wordsize);
 
