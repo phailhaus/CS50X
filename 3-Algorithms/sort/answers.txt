@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: For random and reverse-order data time increases exponentially with n, ruling out merge sort. For presorted data, however, this algorithm runs incredibly fast. That demonstrates that it has an escape mechanism in case it finishes early.
+
+sort2 uses: Merge Sort
+
+How do you know?: Time increases more than linearly with n, but not much more. This is true of all datasets, pointing to merge sort.
+
+sort3 uses: Selection Sort
+
+How do you know?: Time increases exponentially with n. It's faster than sort1 in unsorted cases, but it gets no speedup from the presorted dataset, pointing to a lack of an escape mechanism.
