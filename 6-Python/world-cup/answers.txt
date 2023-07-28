@@ -1,0 +1,19 @@
+Times:
+
+10 simulations: 0m0.040s
+100 simulations: 0m0.037s
+1000 simulations: 0m0.044s
+10000 simulations: 0m0.118s
+100000 simulations: 0m0.732s
+1000000 simulations: 0m7.066s
+
+Questions:
+
+Which predictions, if any, proved incorrect as you increased the number of simulations?:
+
+None. At small numbers, reading from the filesystem and printing to the terminal significantly outweighs the simulations themselves. Once the simulations overtake that, time grows linearly.
+
+Suppose you're charged a fee for each second of compute time your program uses.
+After how many simulations would you call the predictions "good enough"?:
+
+I would say that the one million layer is where it get good enough. Before that, the odds for each of the top teams can vary by a full point from run to run. At the million level, the variance is down to about a tenth of a point, dramatically reducing the risk of material error.
