@@ -1,0 +1,3 @@
+1) They lean strongly toward danceability, lean toward energy, and have middling valence. I'd characterize their aura as "Neutral Thumper"
+
+2) The primary gap is a lack of weighting. We know the top 100 songs, but not how much each one was listened to. With that information, we could tailor the assessment much closer to the user.
