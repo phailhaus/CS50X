@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // Set up button labels and show buttons
+            function setAnswers(target_id, time_offset) {
+                updateDate(target_id, time_offset);
+                setInterval(updateDate, 1000, target_id, time_offset);
+
+                document.getElementById(target_id).style.visibility = "visible";
+            }
+
+            // Updates button labels
+            function updateDate(target_id, time_offset) {
+                const date = new Date();
+                date.setHours(date.getHours() + time_offset)
+                document.getElementById(target_id).textContent = date.toLocaleTimeString();
+            }
+
+            // Recolors incorrect buttons when clicked
+            function wrongButtonDown(target_id, message_id) {
+                document.getElementById(target_id).style.backgroundColor = "red";
+                document.getElementById(message_id).style.visibility = "visible";
+            }
+
+            function wrongButtonUp(target_id) {
+                document.getElementById(target_id).style.backgroundColor = "#ffd9d9";
+            }
+
+            // Recolors correct buttons when clicked
+            function correctButtonDown(target_id, message_id) {
+                document.getElementById(target_id).style.backgroundColor = "green";
+                document.getElementById(message_id).textContent = "Correct!";
+                document.getElementById(message_id).style.visibility = "visible";
+            }
+
+            function correctButtonUp(target_id) {
+                document.getElementById(target_id).style.backgroundColor = "#d9ffdc";
+            }
+
+            // Reset free response on input
+            function freeReset(target_id, message_id) {
+                document.getElementById(target_id).style.backgroundColor = "";
+                document.getElementById(message_id).style.visibility = "hidden";
+            }
+
+            // Check free response
+            function freeCheck(target_id, message_id, answers) {
+                let answer = document.getElementById(target_id).value;
+                answer = answer.toLowerCase();
+                if (answers.includes(answer)) {
+                    document.getElementById(target_id).style.backgroundColor = "#d9ffdc";
+                    document.getElementById(message_id).textContent = "Correct!";
+                    document.getElementById(message_id).style.visibility = "visible";
+                } else {
+                    document.getElementById(target_id).style.backgroundColor = "#ffd9d9";
+                    document.getElementById(message_id).textContent = "Incorrect.";
+                    document.getElementById(message_id).style.visibility = "visible";
+                }
+            }
+
+            // Code that fires after the page loads
+            window.onload = function() {
+                setAnswers("Q1A1", -1);
+                setAnswers("Q1A2", 0);
+                setAnswers("Q1A3", 1);
+            };
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What time is it?</h3>
+                <button id="Q1A1" style="visibility:hidden" onmousedown="wrongButtonDown('Q1A1', 'Q1C')" onmouseup="wrongButtonUp('Q1A1')">A1</button>
+                <button id="Q1A2" style="visibility:hidden" onmousedown="correctButtonDown('Q1A2', 'Q1C')" onmouseup="correctButtonUp('Q1A2')">A2</button>
+                <button id="Q1A3" style="visibility:hidden" onmousedown="wrongButtonDown('Q1A3', 'Q1C')" onmouseup="wrongButtonUp('Q1A3')">A3</button>
+                <h3 id="Q1C" style="visibility:hidden">Incorrect.</h3>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>How many buttons are there?</h3>
+                <input id="Q2I" oninput="freeReset('Q2I', 'Q2C')"></input>
+                <button id="Q2B" onmousedown="freeCheck('Q2I', 'Q2C', ['4', 'four'])">Submit</button>
+                <h3 id="Q2C" style="visibility:hidden">Incorrect.</h3>
+            </div>
+        </div>
+    </body>
+
+</html>

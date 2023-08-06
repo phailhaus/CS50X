@@ -1,0 +1,28 @@
+dt {
+    margin-bottom: 1rem;
+}
+
+hr {
+    border-top: 10px ridge;
+    border-radius: 3px;
+}
+
+hr.clicker_divider {
+    margin-top: 1rem;
+    border-top-width: 20px;
+}
+
+button {
+    box-shadow: 3px 5px 5px 0 #00000060;
+    text-shadow: 2px 2px 8px #000000;
+}
+
+button:hover {
+    box-shadow: 1px 2px 3px 0 #000000ff;
+    text-shadow: 1px 1px 6px #000000;
+}
+
+button:active {
+    box-shadow: 1px 1px 3px 2px #000000ff;
+    text-shadow: 1px 1px 4px #000000;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en" data-bs-theme="dark">
+
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Features</title>
+    </head>
+
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+            <symbol id="logo" height="40" viewBox="0 -960 960 960" width="40">
+                <title>Logo - empty_dashboard from Google's Material Symbols</title>
+                <path fill="grey" d="M226.666-226.666H460V-400H226.666v173.334Zm0-213.334H460v-293.334H226.666V-440ZM500-226.666h233.334V-520H500v293.334ZM500-560h233.334v-173.334H500V-560ZM186.666-120q-27 0-46.833-19.833T120-186.666v-586.668q0-27 19.833-46.833T186.666-840h586.668q27 0 46.833 19.833T840-773.334v66.667h66.666v66.666H840v126.668h66.666v66.666H840v126.668h66.666v66.666H840v66.667q0 27-19.833 46.833T773.334-120H186.666Zm0-66.666h586.668v-586.668H186.666v586.668Zm0-586.668v586.668-586.668Z" />
+            </symbol>
+        </svg>
+        <main>
+            <div class="container">
+                <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+                    <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                        <svg class="bi me-2" width="40" height="40">
+                            <use xlink:href="#logo"></use>
+                        </svg>
+                        <span class="fs-4">Week 8 - HTML, CSS, JavaScript</span>
+                    </a>
+
+                    <ul class="nav nav-pills">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="clicker.html" class="nav-link">Clicker</a></li>
+                        <li class="nav-item"><a href="features.html" class="nav-link active" aria-current="page">Features</a></li>
+                        <li class="nav-item"><a href="changelog.html" class="nav-link">Changelog</a></li>
+                    </ul>
+                </header>
+            </div>
+
+            <div class="container">
+                <dl class="row">
+                    <dt class="col-sm-2">All pages</dt>
+                    <dd class="col-sm-10">
+                        <dl class="row">
+                            <dt class="col-sm-2">Header bar</dt>
+                            <dd class="col-sm-10">A header bar relying on Bootstrap. Uses div, header, a, svg, symbol, path, use, span, ul, and li HTML tags.</dd>
+                        </dl>
+                    </dd>
+                </dl>
+                <dl class="row">
+                    <hr>
+                    <dt class="col-sm-2">Homepage</dt>
+                    <dd class="col-sm-10">
+                        <dl class="row">
+                            <dt class="col-sm-2">Elements</dt>
+                            <dd class="col-sm-10">Pretty basic. It has an h1 and some p tags, but it's nothing exciting. It uses a bunch of divs for layout too.</dd>
+                        </dl>
+                    </dd>
+                </dl>
+                <dl class="row">
+                    <hr>
+                    <dt class="col-sm-2">Clicker</dt>
+                    <dd class="col-sm-10">
+                        <dl class="row">
+                            <dt class="col-sm-2">Elements</dt>
+                            <dd class="col-sm-10">This page uses h1 and h2 for text, buttons for interaction, plus a bunch of divs for layout and an hr for decoration.</dd>
+                            <hr>
+                            <dt class="col-sm-2">Layout</dt>
+                            <dd class="col-sm-10">Laid out using Bootstrap's grid system using divs with row and column classes. Bootstrap handles adaptation to screen sizes.</dd>
+                            <hr>
+                            <dt class="col-sm-2">Buttons</dt>
+                            <dd class="col-sm-10">Buttons that fire javascript functions when clicked.</dd>
+                            <hr>
+                            <dt class="col-sm-2">Custom Javascript</dt>
+                            <dd class="col-sm-10">clicker.js provides functions that allow the user to gain score and purchase upgrades. It updates the displayed text of h2 and button elements on the page.</dd>
+                        </dl>
+                    </dd>
+                </dl>
+                <dl class="row">
+                    <hr>
+                    <dt class="col-sm-2">Features/Changelog</dt>
+                    <dd class="col-sm-10">
+                        <dl class="row">
+                            <dt class="col-sm-2">Elements</dt>
+                            <dd class="col-sm-10">These are built using description lists, using dl, dt, and dd tags. They also have hr tags between elements.</dd>
+                        </dl>
+                    </dd>
+                </dl>
+            </div>
+        </main>
+    </body>
+
+</html>
